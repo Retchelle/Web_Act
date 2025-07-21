@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Client Information Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="form-container">
+    <header>
+      <img src="https://dcassetcdn.com/design_img/3805892/156365/23366833/3n8yb39xdn563ar3rc227awvgy_image.png" class="logo">
+      <div class="header-text">
+        <h1>BANYAN<br><span>WEB DESIGN</span></h1>   
+      </div>
+    </header>
+    <h2>CLIENT INFORMATION FORM</h2>
+
+    <form id="clientForm">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label>Full Name:
+          <input type="text" name="fullname" required placeholder="Rosana Cruz">
+        </label>
+        <label>Company/Organization (if any):
+          <input type="text" name="company" placeholder="Banyan Corp.">
+        </label>
+        <label>Position/Role:
+          <input type="text" name="position" placeholder="HR Executive">
+        </label>
+        <label>Email Address:
+          <input type="email" name="email" required placeholder="e.g. name@example.com">
+        </label>
+        <label>Phone Number:
+          <input type="text" name="phone" placeholder="+63 9968 765 4321">
+        </label>
+        <label>Preferred Method of Contact:</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox"> Email</label>
+          <label><input type="checkbox"> Phone</label>
+          <label><input type="checkbox"> Messaging App</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Project Details</legend>
+        <label>Project Name/Title:
+          <input type="text" name="projectName" >
+        </label>
+        <label>Type of Service Required:</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox"> Web Development</label>
+          <label><input type="checkbox"> Graphic Design</label>
+          <label><input type="checkbox"> Branding</label>
+          <label><input type="checkbox"> Marketing</label>
+        </div>
+        <label>Brief Description of the Project:
+          <input type="text" name="description" >
+        </label>
+        <label>Target Audience:
+          <input type="text" name="audience" >
+        </label>
+        <label>Deadline or Timeline:
+          <input type="text" name="deadline" >
+        </label>
+        <label>Budget Range:</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox"> Below ₱10,000</label>
+          <label><input type="checkbox"> ₱10,000-₱30,000</label>
+          <label><input type="checkbox"> ₱50,000+</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>File & Content Provision</legend>
+        <label>Will you provide content (text, images, etc.)?</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox"> Yes</label>
+          <label><input type="checkbox"> No</label>
+          <label><input type="checkbox"> Partially</label>
+        </div>
+        <label>Do you have brand assets (logo, colors, fonts)?</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox"> Yes</label>
+          <label><input type="checkbox"> No</label>
+          <label><input type="checkbox"> Still in development</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Approvals & Follow-ups</legend>
+        <label>Who will approve designs or decisions on your side?
+          <input type="text" name="approver">
+        </label>
+        <label>How often do you prefer updates?</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox"> Daily</label>
+          <label><input type="checkbox"> Weekly</label>
+          <label><input type="checkbox"> At key milestones only</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Signature (if printed)</legend>
+        <label>Client Signature:
+          <input type="text" name="signature" >
+        </label>
+        <label>Date:
+          <input type="date" name="date">
+        </label>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="confirmationMessage">Thank You! Form submitted successfully.</div>
+  </div>
+
+  <script>
+    const form = document.getElementById('clientForm');
+    const confirmation = document.getElementById('confirmationMessage');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      confirmation.style.display = 'block';  
+      confirmation.scrollIntoView({ behavior: 'smooth' }); 
+    });
+  </script>
+</body>
+</html>
